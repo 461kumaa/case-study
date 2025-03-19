@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NaruralKitchen</title>
+    <title>Menu-NaruralKitchen</title>
     <meta charset="UTF-8">
-    <meta name="description" content="NATURAL KITCHENは創業当初から、カラダにやさしいコーヒーを提供しています。当店のコーヒー、フードは、全てオーガニックの物を使用しています。カフェインレスのコーヒーもご用意しておりますので、お気軽にお立ち寄りください。">
+    <meta name="description" content="健康的で美味しい食事を楽しんでいただくために、当店では栄養バランスにこだわったヘルシーメニューをご用意しております。新鮮な野菜や良質なたんぱく質を使用し、カロリーを抑えつつも満足感のある一皿をお届けします。">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!-- slickの読み込み -->
@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  </head>
   <body>
     <main>
       <!-- ヘッダー -->
@@ -52,41 +53,9 @@
         </nav>
       </header>
 
-
-        <!-- FV -->
-        <div id="carousel-section">
-          <div class="carousel-fade">
-            <div>
-              <img class="carousel-img" src="images/shop-in_corr.jpg">
-            </div>
-            <div>
-              <img class="carousel-img" src="images/renewal_corr.jpg">
-            </div>
-            <div>
-              <img class="carousel-img" src="images/menu_corr.jpg">
-            </div>
-          </div>
-        </div>
       <!-- メイン -->
       <div class="main-width">
         <article>
-          <div id="fv-content">
-            <img class="menu-img" src="images/salad_corr.jpg" alt="サラダの画像">         
-            <p>こんにちは！<br>私たちは創業当初から、カラダにやさしいコーヒーを提供しています。<br>当店のコーヒー、フードは、全てオーガニックの物を使用しています。カフェインレスのコーヒーもご用意しておりますので、お気軽にお立ち寄りください。</p>          
-          </div>
-
-          <!-- ヘルシーフード -->
-          <section id="title-healthy-food">
-            <div class="contents-title">
-              <div class="parallax-content img-healthy">
-                <h2>HEALTHY FOOD</h2>
-              </div>
-            </div>
-            <div class="title-text">
-              <p>私たちのヘルシーフードは、厳選されたオーガニック食材を使用し、栄養バランスを考慮して調理されています。添加物や保存料を一切使用していません。</p>
-            </div>
-          </section>
-
           <!-- メニュー -->
           <section id="title-menu">
             <div class="contents-title">
@@ -95,44 +64,47 @@
               </div>
             </div>
             <div class="title-text">
-              <p>当店のコーヒー、フードは、全てオーガニックの物を使用しています。お子様でも安心してお召し上がりください。</p>
-              <div class="more-btn"><a href="">more</a></div>
+              <p>健康的で美味しい食事を楽しんでいただくために、当店では栄養バランスにこだわったヘルシーメニューをご用意しております。新鮮な野菜や良質なたんぱく質を使用し、カロリーを抑えつつも満足感のある一皿をお届けします。</p>
+            </div>
+          </section>
+          <section>
+            <div class="menu-wrap">
+              <ul class="menu-card">
+                <img class="menu-card-img" src="images/item-coffee.jpg" alt="オーガニックコーヒー">
+                <li class="menu-item">
+                  <p class="menu-card-title">オーガニックコーヒー</p>
+                  <p class="menu-card-price">¥500</p>
+                  <p class="menu-card-text">自然の恵みをそのまま味わえる、こだわりのオーガニックコーヒーをお届けします。農薬や化学肥料を一切使用せずに育てられたコーヒー豆は、豊かな香りと深いコクが特徴。自然環境にも配慮したサステナブルな方法で生産されており、体にもやさしく安心してお楽しみいただけます。</p>
+                </li>
+              </ul>
+              <ul class="menu-card">
+                <img class="menu-card-img" src="images/item-blueberry.jpg" alt="ブルーベリージュース">
+                <li class="menu-item">
+                  <p class="menu-card-title">ブルーベリージュース</p>
+                  <p class="menu-card-price">¥760</p>
+                  <p class="menu-card-text">甘酸っぱい爽やかな味わいが魅力のブルーベリージュース。厳選したブルーベリーをたっぷり使用し、自然の甘みとフレッシュな風味をそのままお楽しみいただけます。豊富に含まれるポリフェノールやビタミンが、毎日の健康をサポート。飲みやすくスッキリとした後味で、朝の目覚めやリフレッシュしたい時にもぴったりです。</p>
+                </li>
+              </ul>
+              <ul class="menu-card">
+                <img class="menu-card-img" src="images/item-pasta.jpg" alt="バジルパスタ">
+                <li class="menu-item">
+                  <p class="menu-card-title">バジルパスタ</p>
+                  <p class="menu-card-price">¥1,100</p>
+                  <p class="menu-card-text">爽やかなバジルの香りが広がる、風味豊かなバジルパスタをご用意しました。新鮮なバジルをたっぷり使用した自家製ジェノベーゼソースは、濃厚ながらも後味が軽やか。香ばしいナッツとチーズのコクが絶妙に絡み合い、もちもちのパスタとともに贅沢な味わいをお楽しみいただけます。</p>
+                </li>
+              </ul>
+              <ul class="menu-card">
+                <img class="menu-card-img" src="images/item-salad.jpg" alt="四季のサラダ">
+                <li class="menu-item">
+                  <p class="menu-card-title">四季のサラダ</p>
+                  <p class="menu-card-price">¥980</p>
+                  <p class="menu-card-text">旬の食材をふんだんに使用した、彩り豊かな四季のサラダをご用意しました。季節ごとに厳選した新鮮な野菜やフルーツを組み合わせ、自然の美味しさを存分に味わえる一皿に仕上げています。シャキシャキとした食感とともに、素材本来の風味を引き立てる自家製ドレッシングがアクセント。</p>
+                </li>
+              </ul>
             </div>
           </section>
 
-          <!-- インフォメーション -->
-          <section id="title-info">
-            <div class="post-block">
-              <h2>INFOMATION</h2>
-              <ul class="post-items">
-                <li class="post-item">
-                  <a href="" class="post-link">
-                    <h3 class="post-title">Webサイトのリニューアル</h3>
-                    <time class="post-date" datetime="2025.03.01">2025.03.01</time>
-                    <p class="post-text">新たに、Webサイトをリニューアルしました。</p>
-                  </a>
-                </li>
-                <hr>
-                <li class="post-item">
-                  <a href="" class="post-link">
-                    <h3 class="post-title">ホワイトデーチョコレートセット販売のお知らせ</h3>
-                    <time class="post-date" datetime="2025.02.17">2025.02.17</time>
-                    <p class="post-text">ホワイトデーチョコレートセットの販売を開始しました。</p>
-                  </a>                
-                </li>
-                <hr>
-                <li class="post-item">
-                  <a href="" class="post-link">
-                    <h3 class="post-title">さくらドリンク販売のお知らせ</h3>
-                    <time class="post-date" datetime="2025.02.10">2025.02.10</time>
-                    <p class="post-text">これからの季節にぴったりのさくらドリンクの販売を開始しました。</p>
-                  </a>
-                </li>
-                <hr>
-              </ul>
-            </div>
-            <div class="more-btn"><a href="">more</a></div>
-         </section>
+          
         </article>
       </div><!-- .main-width -->
 
