@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NaruralKitchen</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="NATURAL KITCHENは創業当初から、カラダにやさしいコーヒーを提供しています。当店のコーヒー、フードは、全てオーガニックの物を使用しています。カフェインレスのコーヒーもご用意しておりますので、お気軽にお立ち寄りください。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- slickの読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <body>
+    <main>
+      <!-- ヘッダー -->
+      <header>
+        <div class="main-width">
+          <h1>NATURAL KITCHEN</h1>
+          <nav id="nav-pc">
+            <a class="nav-link" href="index.html">TOP</a>
+            <a class="nav-link" href="healthy-food.html">HEALTY FOOD</a>
+            <a class="nav-link" href="menu.html">MENU</a>
+            <a class="nav-link" href="blog.html">BLOG</a>
+            <a class="nav-link" href="about-us.html">ABOUT US</a>
+            <a class="nav-link" href="recruit.html">RECRUIT</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </nav>
+        </div>
+
+        <!-- スマホ用メニューボタン -->
+        <img id="menu-sp" src="images/button-menu2.png" alt="ナビゲーションを開く" onclick="document.getElementById('nav-sp').style.display = 'block'">
+
+        <!-- スマホ用ナビゲーション -->
+        <nav id="nav-sp">
+          <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
+          <hr>
+          <a class="menu" href="healty-food.html" onclick="document.getElementById('nav-sp').style.display = 'none'">HEALTY FOOD</a>
+          <hr>
+          <a class="menu" href="menu.html" onclick="document.getElementById('nav-sp').style.display = 'none'">MENU</a>
+          <hr>
+          <a class="menu" href="blog.html" onclick="document.getElementById('nav-sp').style.display = 'none'">BLOG</a>
+          <hr>
+          <a class="menu" href="about-us.html" onclick="document.getElementById('nav-sp').style.display = 'none'">ABOUT US</a>
+          <hr>
+          <a class="menu" href="recruit.html" onclick="document.getElementById('nav-sp').style.display = 'none'">RECRUIT</a>
+          <hr>
+          <a class="menu" href="contact.html" onclick="document.getElementById('nav-sp').style.display = 'none'">CONTACT</a>
+          <hr>
+        </nav>
+      </header>
+
+
+        <!-- FV -->
+        <div id="carousel-section">
+          <div class="carousel-fade">
+            <div>
+              <img class="carousel-img" src="images/shop-in_corr.jpg">
+            </div>
+            <div>
+              <img class="carousel-img" src="images/renewal_corr.jpg">
+            </div>
+            <div>
+              <img class="carousel-img" src="images/menu_corr.jpg">
+            </div>
+          </div>
+        </div>
+      <!-- メイン -->
+      <div class="main-width">
+        <article>
+          <div id="fv-content">
+            <img class="menu-img" src="images/salad_corr.jpg" alt="サラダの画像">         
+            <p>こんにちは！<br>私たちは創業当初から、カラダにやさしいコーヒーを提供しています。<br>当店のコーヒー、フードは、全てオーガニックの物を使用しています。カフェインレスのコーヒーもご用意しておりますので、お気軽にお立ち寄りください。</p>          
+          </div>
+
+          <!-- ヘルシーフード -->
+          <section id="title-healthy-food">
+            <div class="contents-title">
+              <div class="parallax-content img-healthy">
+                <h2>HEALTHY FOOD</h2>
+              </div>
+            </div>
+            <div class="title-text">
+              <p>私たちのヘルシーフードは、厳選されたオーガニック食材を使用し、栄養バランスを考慮して調理されています。添加物や保存料を一切使用していません。</p>
+            </div>
+          </section>
+
+          <!-- メニュー -->
+          <section id="title-menu">
+            <div class="contents-title">
+              <div class="parallax-content img-menu">
+                <h2>MENU</h2>
+              </div>
+            </div>
+            <div class="title-text">
+              <p>当店のコーヒー、フードは、全てオーガニックの物を使用しています。お子様でも安心してお召し上がりください。</p>
+              <div class="more-btn"><a href="">more</a></div>
+            </div>
+          </section>
+
+          <!-- インフォメーション -->
+          <section id="title-info">
+            <div class="post-block">
+              <h2>INFOMATION</h2>
+              <ul class="post-items">
+                <li class="post-item">
+                  <a href="" class="post-link">
+                    <h3 class="post-title">Webサイトのリニューアル</h3>
+                    <time class="post-date" datetime="2025.03.01">2025.03.01</time>
+                    <p class="post-text">新たに、Webサイトをリニューアルしました。</p>
+                  </a>
+                </li>
+                <hr>
+                <li class="post-item">
+                  <a href="" class="post-link">
+                    <h3 class="post-title">ホワイトデーチョコレートセット販売のお知らせ</h3>
+                    <time class="post-date" datetime="2025.02.17">2025.02.17</time>
+                    <p class="post-text">ホワイトデーチョコレートセットの販売を開始しました。</p>
+                  </a>                
+                </li>
+                <hr>
+                <li class="post-item">
+                  <a href="" class="post-link">
+                    <h3 class="post-title">さくらドリンク販売のお知らせ</h3>
+                    <time class="post-date" datetime="2025.02.10">2025.02.10</time>
+                    <p class="post-text">これからの季節にぴったりのさくらドリンクの販売を開始しました。</p>
+                  </a>
+                </li>
+                <hr>
+              </ul>
+            </div>
+            <div class="more-btn"><a href="">more</a></div>
+         </section>
+        </article>
+      </div><!-- .main-width -->
+
+      <!-- フッター -->
+      <footer>
+        <div class="main-width">
+          <h1>NATURAL KITCHEN</h1>
+          <nav id="footer-nav-pc">
+            <a class="nav-link" href="index.html">TOP</a>
+            <a class="nav-link" href="healthy-food.html">HEALTY FOOD</a>
+            <a class="nav-link" href="menu.html">MENU</a>
+            <a class="nav-link" href="blog.html">BLOG</a>
+            <a class="nav-link" href="about-us.html">ABOUT US</a>
+            <a class="nav-link" href="recruit.html">RECRUIT</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </nav>
+          <div id="sns-footer">
+            <a href="https://www.facebook.com/"><img src="images/ico-facebook.png" alt="Facebookのリンク"></a>
+            <a href="https://twitter.com/"><img src="images/ico-twitter.png" alt="Twitterのリンク"></a>
+            <a href=""><img src="images/ico-instagram.png" alt="Instagramのリンク"></a>
+          </div>
+        </div>
+      </footer>
+    </main>    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- slickの読み込み -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
