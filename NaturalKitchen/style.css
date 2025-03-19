@@ -88,9 +88,6 @@ p {
   }
 
   /* カルーセル */
-  #carousel-section {
-    height: 600px;
-  }
   .carousel-img {
     width: 100%;
   }
