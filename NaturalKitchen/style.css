@@ -24,8 +24,7 @@ p {
 }
 
 /*===== PC用スタイル =====*/
-@media screen and (min-width: 900px) {
-
+@media screen and (min-width: 769px) {
   body {
     margin: 0;
   }
@@ -35,23 +34,23 @@ p {
   }
   @media screen and (max-width: 1466px) {
     .main-width {
-      padding-left: 50;
+      padding-left: 50px;
       padding-right: 50px;
     }
   }
 
-  /* ヘッダー */
+  /*== ヘッダー 標準 ==*/
   .main-width > h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
   
-
-  /* ナビゲーション */
+  /*== ナビゲーション 標準 ==*/
   #nav-pc {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     font-size: 20px;
     margin-bottom: 20px;
     width: 100%;
@@ -59,6 +58,7 @@ p {
   #nav-pc > a {
     text-decoration: none;
     margin: 0 20px;
+    transition: 0.5s;
   }
   #nav-pc > a:link {
     color: #000000;
@@ -68,17 +68,23 @@ p {
   }
   #nav-pc > a:hover {
     color: #000000;
-    text-decoration: underline;
+    background-color: rgba(0,0,0,0.2);
   }
   #nav-pc > a:active {
     color: #000000;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.2);
   }
 
-  #check, .hamburger {
-    display: none;
+  /*== ヘッダー 追従 ==*/
+  header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 80;
+    transition: 0.5s;
   }
-
+  
   /* ハンバーガーメニューボタン */
   #menu-sp {
     display: none;
@@ -96,20 +102,21 @@ p {
   #fv-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 200px;
     margin-bottom: 300px;
   }
   .menu-img {
-    width: 40%;
+    align-self: flex-start;
+    min-width: 400px;
+    height: auto;
     margin-left:20px;
   }
   #fv-content > p {
-    display: flex;
-    align-items: center;
     margin: 0 20px;
   }
 
-  /* トップページセクション */
+  /*=== トップページセクション ===*/
 
   /* パララックス */
   .parallax-content {
@@ -161,37 +168,68 @@ p {
   .more-btn > a {
     font-size: 36px;
     color: #000000;
+    transition: 0.5s;
+  }
+  .more-btn > a:hover {
+    color: #000000;
+    background-color: rgba(0,0,0,0.2);
   }
 
   /* インフォメーション　ブログ */
   #title-info {
     margin-top: 300px;
   }
+  .post-block {
+    margin-top: 80px;
+  }
   .post-block h2 {
     text-align: center;
     font-size: 44px;
   }
   .post-items {
-    margin: 0 20px;
     padding-left: 0;
   }
   .post-item {
     display: block;
+    margin: 30px auto;
+    padding-left: 1vw;
+    transition: 0.5s;
+  }
+  .post-item:hover {
+    background-color: rgba(0,0,0,0.2);
   }
   .post-link {
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
     color: #000000;
   }
   .post-title {
-    margin-bottom: 5px;
+    display: block;
+    margin: auto 0;
+    width: 100%;
     font-size: 28px;
   }
   .post-date {
+    display: block;
+    margin: auto 2vw;
+    width: 50%;
     font-size: 16px;
     color: gray;
+  }  
+  .arrow::before {
+    content: "";
+    display: block;
+    position: relative;
+    right: 2vw;
+    margin: 0.5vw 2vw auto 7vw;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
   }
-  .post-text {
-    margin: 5px 0;
+  .arrow.-right::before{
+    transform: rotate(45deg);
   }
 
   /* フッター */
@@ -208,7 +246,8 @@ p {
  
   #footer-nav-pc {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     font-size: 20px;
     margin-bottom: 20px;
     width: 100%;
@@ -216,6 +255,7 @@ p {
   #footer-nav-pc > a {
     text-decoration: none;
     margin: 0 20px;
+    transition: 0.5s;
   }
   #footer-nav-pc > a:link {
     color: #ffffff;
@@ -225,11 +265,11 @@ p {
   }
   #footer-nav-pc > a:hover {
     color: #ffffff;
-    text-decoration: underline;
+    background-color: rgba(170, 170, 170, 0.5);
   }
   #footer-nav-pc > a:active {
     color: #ffffff;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(170, 170, 170, 0.5);
   }
   #sns-footer {
     display: flex;
@@ -297,6 +337,31 @@ p {
     color: rgba(0,0,0,0.5)
   }
 
+  /* ブログ詳細ページ */
+  #post-details {
+    margin: 200px 0;
+  }
+  #post-details h3 {
+    font-size: 36px;
+    text-decoration: underline;
+  }
+  #post-details time {
+    display: block;
+    margin: 10px 0 0 0;
+    width: 50%;
+    font-size: 20px;
+    color: gray;
+  }
+  #post-details P {
+    margin-top: 80px;
+  }
+  .post-subtitle {
+    font-weight: bold;
+  }
+  .post-detailsImg {
+    width: 100%;
+  }
+
   /* アバウトアス */
   .table-container {
     display: flex;
@@ -325,7 +390,7 @@ p {
     text-decoration: underline;
   }
   .recruit-block {
-    margin-top: 50px;
+    margin-top: 80px;
   }
   .recruit-container {
     display: flex;
@@ -337,9 +402,10 @@ p {
   .contact-btn {
     text-align: center;
     margin-left: 7vw;
-    width: 20%;
+    width: 270px;
     height: 20%;
     border: solid 1px rgba(0,0,0,1);
+    transition: 0.5s;
   }
   .contact-btn a {
     display: inline-block;
@@ -349,8 +415,31 @@ p {
     font-size: 36px;
     color: rgba(0,0,0,1);
   }
+  .contact-btn:hover {
+    transform: translateY(2px);
+    background-color: rgba(0,0,0,0.2);
+  }
 
   /* コンタクトページ */
+  #FAQ {
+    margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2vw;
+    background-color: #d4c9af79;
+  }
+  .FAQ-title {
+    font-size: 24px;
+  }
+  .FAQ-Q {
+    padding-left: 3vw;
+    font-size: 24px;
+  }
+  .FAQ-A {
+    padding-left: 4vw;
+    font-size: 24px;
+  }
+
   .contact {
     margin-top: 150px;
   }
@@ -367,6 +456,7 @@ p {
     font-weight: bold;
   }
   .contact-span {
+    font-size: 24px;
     color: rgba(255, 0, 0, 0.5)
   }
   .contact-textbox {
@@ -408,37 +498,47 @@ p {
     transform: translateY(2px);
     background-color: rgba(0,0,0,0.2);
   }
-
 }
 
 
 
 
 
-/*===== スマートフォン用スタイル =====*/
-@media screen and (max-width: 899px) {
 
+
+
+/*===== スマートフォン用スタイル =====*/
+@media screen and (max-width: 768px) {
   body {
-    max-width: 899px;
-    margin: 0 30px;
+    margin: 0;
+  }
+  .main-width {
+    max-width: 768px;
+    min-width: 430px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   /* ヘッダー */
-  header {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-  }
-  header > h1 {
+  header h1 {
     font-size: 5vw;
-
   }
   #nav-pc {
     display: none;
+  }
+  /*== ヘッダー 追従 ==*/
+  header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 80;
+    transition: 0.5s;
   }
 
   /* ハンバーガーメニュー表示用 */
   #menu-sp {
     position: absolute;
+    top: 2vw;
     right: 30px;
     width: 10vw;
     height: auto;
@@ -470,11 +570,11 @@ p {
   }
   #nav-sp > a:hover {
     color: #ffffff;
-    text-decoration: underline;
+    background-color: rgba(170, 170, 170, 0.5);
   }
   #nav-sp > a:active {
     color: #ffffff;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(170, 170, 170, 0.5);
   }
   #nav-sp > .menu {
     text-decoration: none;
@@ -491,4 +591,409 @@ p {
     width: 100%;
   }
 
+   /* FV説明文 */
+  #fv-content {
+    margin-top: 200px;
+    margin-bottom: 300px;
+  }
+  .menu-img {
+    width: 100%;
+    height: auto;
+  }
+  #fv-content > p {
+    padding: 0 20px;
+  }
+
+  /*=== トップページセクション ===*/
+
+  /* パララックス */
+  .parallax-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5%;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .parallax-content h2 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: rgba(0,0,0,0.5) 1px 0 0.3em;
+  }
+  .img-healthy {
+    background-image: url(images/healthy_corr.jpg);
+  }
+  .title-text {
+    margin-top: 80px;
+    margin-bottom: 200px;
+    padding: 0 20px;
+  }
+  .img-menu {
+    background-image: url(images/In-store-menu_corr.jpg);
+  }
+  .img-blog {
+    background-image: url(images/blog_corr.jpg);
+  }
+  .img-about_us {
+    background-image: url(images/shop-in_corr.jpg);
+  }
+  .img-recruit {
+    background-image: url(images/staff_corr.jpg);
+  }
+  .img-contact {
+    background-image: url(images/coffee-beans_corr.jpg);
+  }
+
+  .more-btn {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .more-btn > a {
+    font-size: 36px;
+    color: #000000;
+    transition: 0.5s;
+  }
+  .more-btn > a:hover {
+    color: #000000;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  /* インフォメーション　ブログ */
+  #title-info {
+    margin-top: 300px;
+  }
+  .post-block {
+    margin-top: 80px;
+  }
+  .post-block h2 {
+    text-align: center;
+    font-size: 44px;
+  }
+  .post-items {
+    padding-left: 0;
+  }
+  .post-item {
+    display: block;
+    margin: 30px auto;
+    padding-left: 1vw;
+    transition: 0.5s;
+  }
+  .post-item:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #000000;
+  }
+  .post-title {
+    display: block;
+    margin: auto 0;
+    width: 100%;
+    font-size: 28px;
+  }
+  .post-date {
+    display: block;
+    margin: auto 2vw;
+    width: 50%;
+    font-size: 16px;
+    color: gray;
+  }  
+  .arrow::before {
+    content: "";
+    display: block;
+    position: relative;
+    right: 2vw;
+    margin: 0.5vw 2vw auto 7vw;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+  }
+  .arrow.-right::before{
+    transform: rotate(45deg);
+  }
+
+  /* フッター */
+  footer {
+    margin-top: 300px;
+    padding-top: 30px;
+    height:400px;
+    background-color: #D4C9AF;
+  }
+  footer .main-width {
+    margin-top: 30px;
+    color: #ffffff;
+  }
+  footer h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+ 
+  #footer-nav-pc {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #footer-nav-pc > a {
+    text-decoration: none;
+    margin: 0 20px;
+    transition: 0.5s;
+  }
+  #footer-nav-pc > a:link {
+    color: #ffffff;
+  }
+  #footer-nav-pc > a:visited {
+    color: #ffffff;
+  }
+  #footer-nav-pc > a:hover {
+    color: #ffffff;
+    background-color: rgba(170, 170, 170, 0.5);
+  }
+  #footer-nav-pc > a:active {
+    color: #ffffff;
+    background-color: rgba(170, 170, 170, 0.5);
+  }
+  #sns-footer {
+    display: flex;
+    justify-content: center;
+  }
+  #sns-footer img {
+    width: 50px;
+    margin: 10px 30px 30px 30px;
+  }
+
+  /* ヘルシーフードページ */
+   .content-block-img {
+    width: 100%;
+  }
+  .content-block-img img {
+    width: 100%;
+  }
+  .content-block-imgLeft {
+    margin-top: 300px;
+    padding: 0 20px;
+  }
+  .content-block-text {
+    display: block;
+    width: 100%;
+  }
+  .content-block-text h3 {
+    text-align: center;
+    line-height: 80px;
+    width: 100%;
+    height: 80px;
+    font-size: 4vw;
+    color: #ffffff;
+    background-color: #D4C9AF;
+  }
+  .content-block-imgRight {
+    margin-top: 300px;
+    padding: 0 20px;
+  }
+  /* メニューページ */
+  .menu-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu-card {
+    margin: 0 20px 80px -24px;
+    width: 100%;
+  }
+  .menu-card-img {
+    width: 100%;
+  }
+  .menu-item {
+    list-style-type: none;
+  }
+  .menu-card-title {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+  .menu-card-price {
+    margin-top: 0.1em;
+    color: rgba(0,0,0,0.5)
+  }
+
+  /* ブログ詳細ページ */
+  #post-details {
+    margin: 200px 0;
+  }
+  #post-details h3 {
+    font-size: 36px;
+    text-decoration: underline;
+  }
+  #post-details time {
+    display: block;
+    margin: 10px 0 0 0;
+    width: 50%;
+    font-size: 20px;
+    color: gray;
+  }
+  #post-details P {
+    margin-top: 80px;
+  }
+  .post-subtitle {
+    font-weight: bold;
+  }
+  .post-detailsImg {
+    width: 100%;
+  }
+
+  /* アバウトアス */
+  .table-container {
+    margin: 200px 20px 0 20px;
+    font-size: 24px;
+  }
+  .cell-left {
+    padding: 16px 0;
+    font-weight: bold;
+    border-bottom: solid 1px rgba(0,0,0,1);
+  }
+  .cell-right {
+    padding: 16px 20px 16px 50px;
+    border-bottom: solid 1px rgba(0,0,0,0.2);
+  }
+  .table-container iframe {
+    margin-top: 7vw;
+    width: 100%;
+  }
+
+  /* リクルートページ */
+  .recruit-title {
+    margin-top: 100px;
+  }
+  .recruit-title h3 {
+    text-decoration: underline;
+  }
+  .recruit-block {
+    margin-top: 80px;
+  }
+  .recruit-container {
+    display: flex;
+    margin-top: 150px;
+  }
+  .recruit-container img {
+    width: 50%;
+  }
+  .contact-btn {
+    text-align: center;
+    margin-left: 7vw;
+    width: 200px;
+    height: 20%;
+    border: solid 1px rgba(0,0,0,1);
+    transition: 0.5s;
+  }
+  .contact-btn a {
+    display: inline-block;
+    padding: 20px 0;
+    width: 100%;
+    text-decoration: none;
+    font-size: 36px;
+    color: rgba(0,0,0,1);
+  }
+  .contact-btn:hover {
+    transform: translateY(2px);
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  /* コンタクトページ */
+  #FAQ {
+    margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2vw;
+    background-color: #d4c9af79;
+  }
+  .FAQ-title {
+    font-size: 24px;
+  }
+  .FAQ-Q {
+    padding-left: 3vw;
+    font-size: 24px;
+  }
+  .FAQ-A {
+    padding-left: 4vw;
+    font-size: 24px;
+  }
+
+  .contact {
+    margin-top: 150px;
+  }
+  .contact-container {
+    display: flex;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  .contact-heading {
+    width: 280px;
+    align-self: center;
+  }
+  .contact-label {
+    font-weight: bold;
+  }
+  .contact-span {
+    font-size: 24px;
+    color: rgba(255, 0, 0, 0.5)
+  }
+  .contact-textbox {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    background-color: #fafafa;
+    width: 500px;
+    height: 56px;
+    font-size: 20px;
+  }
+  .contact-textarea {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: #707070;
+    border-bottom-style: solid;
+    background-color: #fafafa;
+    width: 500px;
+    height: 200px;
+    font-size: 20px;
+  }
+  .send-btn {
+    position:relative;
+    margin-top: 50px;
+    width: 130px;
+    height: 50px;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .send-btn:hover {
+    transform: translateY(2px);
+    background-color: rgba(0,0,0,0.2);
+  }
+}
+
+/*==== jQuery ====*/
+section {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+}
+.fade-in {
+  opacity: 1;
+  visibility: visible;
 }

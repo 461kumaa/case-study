@@ -38,6 +38,8 @@
         <nav id="nav-sp">
           <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
           <hr>
+          <a class="menu" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">TOP</a>
+          <hr>
           <a class="menu" href="healty-food.html" onclick="document.getElementById('nav-sp').style.display = 'none'">HEALTY FOOD</a>
           <hr>
           <a class="menu" href="menu.html" onclick="document.getElementById('nav-sp').style.display = 'none'">MENU</a>
@@ -57,7 +59,7 @@
       <div class="main-width">
         <article>
           <!-- コンタクト -->
-          <section id="title-healthy-food">
+          <div id="title-healthy-food">
             <div class="contents-title">
               <div class="parallax-content img-contact">
                 <h2>CONTACT</h2>
@@ -66,7 +68,7 @@
             <div class="recruit-title">
               <h3>お問い合わせ</h3>
             </div>
-          </section>
+          </div>
           <section>
             <div class="recruit-block">
               <p>当店へのご質問やご相談がございましたら、お気軽にお問い合わせください。メニューやサービスに関するご不明点、イベントのご予約、採用情報など、さまざまなご相談を承っております。</p>
@@ -76,6 +78,27 @@
             </div>
             <div class="recruit-block">
               <p>皆さまからのご連絡をお待ちしております。</p>
+            </div>
+            <div id="FAQ">
+              <details>
+                <summary class="FAQ-title">よくあるご質問</summary>
+                  <details class="FAQ-block">
+                    <summary class="FAQ-Q">Q. 質問テキストテキスト</summary>
+                    <p class="FAQ-A">A. 回答テキストテキストテキスト</p>
+                  </details>
+                  <details class="FAQ-block">
+                    <summary class="FAQ-Q">Q. 質問テキストテキスト</summary>
+                    <p class="FAQ-A">A. 回答テキストテキストテキスト</p>
+                  </details>
+                  <details class="FAQ-block">
+                    <summary class="FAQ-Q">Q. 質問テキストテキスト</summary>
+                    <p class="FAQ-A">A. 回答テキストテキストテキスト</p>
+                  </details>
+                  <details class="FAQ-block">
+                    <summary class="FAQ-Q">Q. 質問テキストテキスト</summary>
+                    <p class="FAQ-A">A. 回答テキストテキストテキスト</p>
+                  </details>
+              </details>
             </div>
             <form>
               <div class="contact">
@@ -111,7 +134,7 @@
                   <textarea class="contact-textarea" name="message" placeholder="入力してください"></textarea>
                 </div>
                 </div>
-                <p><span class="contact-span">＊</span>印は必須項目です。</p>
+                <p><span class="contact-span">*</span>印は必須項目です。</p>
               </div>
               <input class="send-btn" type="submit" value="送信">
             </form>

@@ -38,6 +38,8 @@
         <nav id="nav-sp">
           <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる" onclick="document.getElementById('nav-sp').style.display = 'none'">
           <hr>
+          <a class="menu" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">TOP</a>
+          <hr>
           <a class="menu" href="healty-food.html" onclick="document.getElementById('nav-sp').style.display = 'none'">HEALTY FOOD</a>
           <hr>
           <a class="menu" href="menu.html" onclick="document.getElementById('nav-sp').style.display = 'none'">MENU</a>
@@ -57,22 +59,23 @@
       <div class="main-width">
         <article>
           <!-- ブログページ -->
-          <section id="title-menu">
+          <div id="title-menu">
             <div class="contents-title">
               <div class="parallax-content img-blog">
                 <h2>BLOG</h2>
               </div>
             </div>            
-          </section>
+          </div>
 
           <section>
             <div class="post-block">
               <ul class="post-items">
+                <hr>
                 <li class="post-item">
-                  <a href="" class="post-link">
+                  <a href="blog-details.html" class="post-link">
                     <h3 class="post-title">Webサイトのリニューアル</h3>
                     <time class="post-date" datetime="2025.03.01">2025.03.01</time>
-                    <p class="post-text">新たに、Webサイトをリニューアルしました。</p>
+                    <span class="arrow -right"></span>
                   </a>
                 </li>
                 <hr>
@@ -80,7 +83,7 @@
                   <a href="" class="post-link">
                     <h3 class="post-title">ホワイトデーチョコレートセット販売のお知らせ</h3>
                     <time class="post-date" datetime="2025.02.17">2025.02.17</time>
-                    <p class="post-text">ホワイトデーチョコレートセットの販売を開始しました。</p>
+                    <span class="arrow -right"></span>
                   </a>                
                 </li>
                 <hr>
@@ -88,13 +91,13 @@
                   <a href="" class="post-link">
                     <h3 class="post-title">さくらドリンク販売のお知らせ</h3>
                     <time class="post-date" datetime="2025.02.10">2025.02.10</time>
-                    <p class="post-text">これからの季節にぴったりのさくらドリンクの販売を開始しました。</p>
+                    <span class="arrow -right"></span>
                   </a>
                 </li>
                 <hr>
               </ul>
             </div>
-            <div class="more-btn"><a href="">more</a></div><!-- 削るかも -->
+            
           </section>
         </article>
       </div><!-- .main-width -->
